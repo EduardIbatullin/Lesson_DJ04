@@ -1,0 +1,25 @@
+{% extends "films/layout.html" %}
+
+{% block title %}Список фильмов{% endblock %}
+
+{% block content %}
+<h1>Список фильмов</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Отзыв</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for film in films %}
+        <tr>
+            <td>{{ film.title }}</td>
+            <td>{{ film.description }}</td>
+            <td>{{ film.review }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

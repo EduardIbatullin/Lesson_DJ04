@@ -1,0 +1,16 @@
+{% extends "films/layout.html" %}
+
+{% block title %}Добавить фильм{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1 class="text-center mb-4">Добавить фильм</h1>
+        <form method="POST" class="shadow p-4 bg-light rounded">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-block mt-4">Сохранить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
